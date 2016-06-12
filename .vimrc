@@ -24,9 +24,23 @@ Plugin 'scrooloose/syntastic'
 " For showing the file's status in git
 Plugin 'airblade/vim-gitgutter'
 " For tab completion
-Plugin 'ervandew/supertab'
-let g:SuperTabDefaultCompletionType = "<c-n>"
+" Plugin 'ervandew/supertab'
+" For tmux files highlighting
+Plugin 'tmux-plugins/vim-tmux'
+" Status Line ehancement
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme='jellybeans'
+let g:airline_powerline_fonts = 1
+let g:airline_section_b = ''
+let g:airline_section_y = ''
 
+" Completion engine
+Plugin 'Valloric/YouCompleteMe'
+autocmd CompleteDone * pclose
+Plugin 'ternjs/tern_for_vim'
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -75,6 +89,8 @@ colorscheme adio
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set number
+set tabstop=4
+set shiftwidth=4
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands

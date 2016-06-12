@@ -1,0 +1,35 @@
+pane	0	0	:zsh	1	:*	0	:/Users/viktorchibotaru	1	zsh	:
+pane	Android	0	:zsh	1	:*	0	:/Users/viktorchibotaru	1	zsh	:
+pane	Android	1	:emulator	0	:-	0	:/Users/viktorchibotaru	1	zsh	:
+pane	Compilers	0	:python	0	:-	0	:/Users/viktorchibotaru/Desktop/studies/4th year/2nd sem/Compilers/3	1	zsh	:
+pane	Compilers	1	:zsh	1	:*	0	:/Users/viktorchibotaru/Desktop/studies/4th year/2nd sem/Compilers/3	1	zsh	:
+pane	Compilers	2	:zsh	0	:	0	:/Users/viktorchibotaru/Desktop/studies/4th year/2nd sem/Compilers/pycomp	1	zsh	:
+pane	DOM-Clobbering	0	:code	0	:-	0	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering	0	Vim	:/usr/local/Cellar/macvim/7.4-94/MacVim.app/Contents/MacOS/Vim -g -v Tracker/tracker.js
+pane	DOM-Clobbering	0	:code	0	:-	1	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering	1	Vim	:/usr/local/Cellar/macvim/7.4-94/MacVim.app/Contents/MacOS/Vim -g -v Debugger/debugger-wrapper.js
+pane	DOM-Clobbering	1	:tests	1	:*	0	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering/Test_pages/damn_vulnerable/location_hash_to_window_eval	1	zsh	:
+pane	DOM-Clobbering	1	:tests	1	:*	1	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering/Test_pages/damn_vulnerable/location_hash_to_window_eval	0	Vim	:/usr/local/Cellar/macvim/7.4-94/MacVim.app/Contents/MacOS/Vim -g -v launch-conf.json
+pane	DOM-Clobbering	2	:zsh	0	:	0	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering	1	zsh	:
+pane	DOM-Clobbering	3	:sites	0	:	0	:/Users/viktorchibotaru/Sites/location_hash_to_eval/dvm_files	1	Vim	:/usr/local/Cellar/macvim/7.4-94/MacVim.app/Contents/MacOS/Vim -g -v location_hash_to_window_eval.js
+pane	DOM-Clobbering	4	:node	0	:	0	:/Users/viktorchibotaru/Sites	1	zsh	:
+pane	dotfiles	1	:zsh	1	:*	0	:/Users/viktorchibotaru	1	zsh	:
+pane	passwds	0	:Vim	0	:-	0	:/Users/viktorchibotaru/keepass_passwds	1	zsh	:
+pane	passwds	0	:Vim	0	:-	1	:/Users/viktorchibotaru/keepass_passwds	0	zsh	:
+pane	passwds	0	:Vim	0	:-	2	:/Users/viktorchibotaru/keepass_passwds	0	zsh	:
+pane	passwds	1	:zsh	1	:*	0	:/Users/viktorchibotaru/keepass_passwds	1	zsh	:
+pane	passwds	2	:Vim	0	:	0	:/Users/viktorchibotaru/keepass_passwds	1	zsh	:
+window	0	0	1	:*	c09d,204x45,0,0,0
+window	Android	0	1	:*	c09e,204x45,0,0,1
+window	Android	1	0	:-	c09f,204x45,0,0,2
+window	Compilers	0	0	:-	c0a0,204x45,0,0,3
+window	Compilers	1	1	:*	c0a1,204x45,0,0,4
+window	Compilers	2	0	:	c0a2,204x45,0,0,5
+window	DOM-Clobbering	0	0	:-	345f,204x45,0,0{107x45,0,0,6,96x45,108,0,7}
+window	DOM-Clobbering	1	1	:*	07ac,204x45,0,0{139x45,0,0,8,64x45,140,0,9}
+window	DOM-Clobbering	2	0	:	607f,204x45,0,0,10
+window	DOM-Clobbering	3	0	:	6080,204x45,0,0,11
+window	DOM-Clobbering	4	0	:	6081,204x45,0,0,12
+window	dotfiles	1	1	:*	6082,204x45,0,0,13
+window	passwds	0	0	:-	aaf7,204x45,0,0{132x45,0,0[132x31,0,0,14,132x13,0,32,15],71x45,133,0,16}
+window	passwds	1	1	:*	6086,204x45,0,0,17
+window	passwds	2	0	:	6087,204x45,0,0,18
+state	DOM-Clobbering	dotfiles

@@ -1,0 +1,14 @@
+pane	DOM-Clobbering	0	:code	0	:-	0	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering	1	vim	:vim main.js
+pane	DOM-Clobbering	0	:code	0	:-	1	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering	0	vim	:vim Tests/test.js
+pane	DOM-Clobbering	1	:shell	1	:*	0	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering	1	zsh	:
+pane	DOM-Clobbering	2	:git	0	:	0	:/Users/viktorchibotaru/Desktop/DOM-Clobbering/DOM-Clobbering	1	zsh	:
+pane	DOM-Clobbering	3	:sites	0	:	0	:/Users/viktorchibotaru/Sites	1	vim	:vim DC.php
+pane	DOM-Clobbering	4	:zsh	0	:	0	:/Users/viktorchibotaru/Downloads/mozjs-38.0.0	1	zsh	:
+pane	dotfiles	1	:zsh	1	:*	0	:/Users/viktorchibotaru	1	zsh	:
+window	DOM-Clobbering	0	0	:-	dad6,204x45,0,0{102x45,0,0,2,101x45,103,0,20}
+window	DOM-Clobbering	1	1	:*	6082,204x45,0,0,13
+window	DOM-Clobbering	2	0	:	c0a1,204x45,0,0,4
+window	DOM-Clobbering	3	0	:	c0a2,204x45,0,0,5
+window	DOM-Clobbering	4	0	:	6085,204x45,0,0,16
+window	dotfiles	1	1	:*	c0a3,204x45,0,0,6
+state	DOM-Clobbering	

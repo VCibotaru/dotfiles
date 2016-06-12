@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/viktorchibotaru/.oh-my-zsh
 
+alias vim='mvim -v'
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -53,7 +54,7 @@ plugins=(git osx brew)
 
 # User configuration
 
-export PATH="$PATH:/Users/viktorchibotaru/.rvm/gems/ruby-2.1.0/bin:/Users/viktorchibotaru/.rvm/gems/ruby-2.1.0@global/bin:/Users/viktorchibotaru/.rvm/rubies/ruby-2.1.0/bin:/Users/viktorchibotaru/Qt5.5.1/5.5/clang_64/bin:/Users/viktorchibotaru/Desktop/studies/InfoSec/diplom/Danila/diplom:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/viktorchibotaru/android-sdks/platform-tools:/Users/viktorchibotaru/android-sdks/tools:/Users/viktorchibotaru/Desktop/studies/InfoSec/Android/dex2jar:/opt/X11/bin:/usr/local/git/bin:/usr/texbin:/Users/viktorchibotaru/.rvm/bin"
+export PATH="$PATH:/Users/viktorchibotaru/.rvm/gems/ruby-2.1.0/bin:/Users/viktorchibotaru/.rvm/gems/ruby-2.1.0@global/bin:/Users/viktorchibotaru/.rvm/rubies/ruby-2.1.0/bin:/Users/viktorchibotaru/Qt5.5.1/5.5/clang_64/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/viktorchibotaru/android-sdks/platform-tools:/Users/viktorchibotaru/android-sdks/tools:/opt/X11/bin:/usr/local/git/bin:/usr/texbin:/Users/viktorchibotaru/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
