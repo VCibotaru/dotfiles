@@ -30,6 +30,13 @@ Plugin 'tmux-plugins/vim-tmux'
 " Status Line ehancement
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" Tag bar
+Plugin 'majutsushi/tagbar'
+
+" Shortcut for tagbar
+map <C-t> :TagbarToggle<CR>
+
+" Vim airline colors and fonts
 let g:airline_theme='jellybeans'
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = ''
@@ -45,34 +52,12 @@ let g:tern_show_argument_hints='on_hold'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 " CTRLP plugin variables
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " NERDTree key mappings
 map <C-n> :NERDTreeToggle<CR>
-
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2008 Dec 17
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -91,12 +76,17 @@ set backspace=indent,eol,start
 set number
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set expandtab
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set statusline+=%F
 set laststatus=2
+
+" To keep the copy buffer between terminal windows
+set clipboard=unnamed
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
