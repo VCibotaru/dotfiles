@@ -32,6 +32,28 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Tag bar
 Plugin 'majutsushi/tagbar'
+" Easy motion
+Plugin 'easymotion/vim-easymotion'
+
+" Easy motion configs
+" ------------------------------------
+
+" <Leader>f{char} to move to {char}
+map  sf <Plug>(easymotion-bd-f)
+nmap sf <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+" nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map sL <Plug>(easymotion-bd-jk)
+nmap sL <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  sw <Plug>(easymotion-bd-w)
+nmap sw <Plug>(easymotion-overwin-w)
+" Done easy motion configs
+" ------------------------------------
 
 " Shortcut for tagbar
 map <C-t> :TagbarToggle<CR>
@@ -45,6 +67,10 @@ let g:airline_section_y = ''
 " Completion engine
 Plugin 'Valloric/YouCompleteMe'
 autocmd CompleteDone * pclose
+let g:ycm_confirm_extra_conf=0
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+
 Plugin 'ternjs/tern_for_vim'
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
@@ -75,8 +101,8 @@ colorscheme adio
 set backspace=indent,eol,start
 set number
 set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -84,6 +110,13 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set statusline+=%F
 set laststatus=2
+
+au BufRead *.c set colorcolumn=80 "show red line 
+au BufRead *.cpp set colorcolumn=80 "show red line 
+au BufRead *.py set colorcolumn=80 "show red line 
+
+au BufRead *.tex set spell spelllang=en_us " enable spell check
+au BufRead *.txt set spell spelllang=en_us " enable spell check
 
 " To keep the copy buffer between terminal windows
 set clipboard=unnamed
@@ -122,8 +155,8 @@ if has("autocmd")
   augroup vimrcEx
   au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+  " For all text files set 'textwidth' to 80 characters.
+  autocmd FileType text setlocal textwidth=80
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
