@@ -14,3 +14,8 @@ fi
 
 alias vim='mvim -v'
 alias objdump='gobjdump'
+alias rvm='/Users/viktorchibotaru/.rvm/bin/rvm'
+
+
+# Switch to latest version of Ruby
+source $HOME/.rvm/scripts/rvm

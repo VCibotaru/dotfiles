@@ -1,5 +1,4 @@
 *.sh
-.vim/bundle/*
 .tmux/resurrect/*
 *.pyc
 *.swp

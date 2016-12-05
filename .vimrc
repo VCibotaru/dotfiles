@@ -111,6 +111,7 @@ set incsearch		" do incremental searching
 set statusline+=%F
 set laststatus=2
 
+
 au BufRead *.c set colorcolumn=80 "show red line 
 au BufRead *.cpp set colorcolumn=80 "show red line 
 au BufRead *.py set colorcolumn=80 "show red line 

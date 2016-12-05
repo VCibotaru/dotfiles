@@ -4,7 +4,9 @@ Steps to install the dotfiles:
 3. install tmux
 4. install vim
 5. install Vundle git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-6. copy .tmux.conf 
-7. copy .vimrc
-8. run PluginInstall in vim
-9. fuck around with YCM
+6. copy .vimrc
+7. run PluginInstall in vim
+8. copy .tmux.conf 
+9. install tmux plugin manager git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+10. run prefix+I in tmux to install plugins
+11. install powerfonts https://github.com/powerline/fonts
