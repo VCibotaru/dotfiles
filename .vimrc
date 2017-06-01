@@ -1,3 +1,5 @@
+set exrc
+set secure
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -34,7 +36,14 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
-
+" More colors
+Plugin 'jeaye/color_coded'
+" YCM and color_coded project generator
+Plugin 'rdnetto/YCM-Generator'
+" Completion engine
+Plugin 'Valloric/YouCompleteMe'
+" Local VimRC
+Plugin 'embear/vim-localvimrc'
 " Easy motion configs
 " ------------------------------------
 
@@ -64,20 +73,18 @@ let g:airline_powerline_fonts = 1
 let g:airline_section_b = ''
 let g:airline_section_y = ''
 
-" Completion engine
-Plugin 'Valloric/YouCompleteMe'
 autocmd CompleteDone * pclose
 let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 
-Plugin 'ternjs/tern_for_vim'
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Local VimRC settings
+let g:localvimrc_sandbox = 0
+let g:localvimrc_ask = 0
 
 " CTRLP plugin variables
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -110,17 +117,19 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set statusline+=%F
 set laststatus=2
+set cursorline
 
 
 au BufRead *.c set colorcolumn=80 "show red line 
+au BufRead *.h set colorcolumn=80 "show red line 
 au BufRead *.cpp set colorcolumn=80 "show red line 
 au BufRead *.py set colorcolumn=80 "show red line 
 
-au BufRead *.tex set spell spelllang=en_us " enable spell check
-au BufRead *.txt set spell spelllang=en_us " enable spell check
+" au BufRead *.tex set spell spelllang=en_us " enable spell check
+" au BufRead *.txt set spell spelllang=en_us " enable spell check
 
 " To keep the copy buffer between terminal windows
-set clipboard=unnamed
+set clipboard=unnamedplus
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
