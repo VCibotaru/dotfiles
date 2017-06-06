@@ -42,8 +42,15 @@ Plugin 'jeaye/color_coded'
 Plugin 'rdnetto/YCM-Generator'
 " Completion engine
 Plugin 'Valloric/YouCompleteMe'
+" Golang plugin
+Plugin 'fatih/vim-go'
 " Local VimRC
 Plugin 'embear/vim-localvimrc'
+
+" Local VimRC settings
+let g:localvimrc_sandbox = 0
+let g:localvimrc_ask = 0
+
 " Easy motion configs
 " ------------------------------------
 
@@ -63,6 +70,12 @@ map  sw <Plug>(easymotion-bd-w)
 nmap sw <Plug>(easymotion-overwin-w)
 " Done easy motion configs
 " ------------------------------------
+
+" Vim-Go
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
 
 " Shortcut for tagbar
 map <C-t> :TagbarToggle<CR>
