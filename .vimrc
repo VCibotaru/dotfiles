@@ -1,5 +1,3 @@
-set exrc
-set secure
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -36,16 +34,35 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
-" More colors
-Plugin 'jeaye/color_coded'
-" YCM and color_coded project generator
-Plugin 'rdnetto/YCM-Generator'
-" Completion engine
-Plugin 'Valloric/YouCompleteMe'
 " Golang plugin
 Plugin 'fatih/vim-go'
 " Local VimRC
 Plugin 'embear/vim-localvimrc'
+" Highlight trailing whitespaces
+Plugin 'ntpeters/vim-better-whitespace'
+" CtrlP fuzzy finder
+Plugin 'kien/ctrlp.vim'
+" YCM generator
+Plugin 'rdnetto/YCM-Generator'
+" Color-coded
+" Plugin 'jeaye/color_coded'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" Buffer manager
+" nmap <c-b> <Leader>b
+Plugin 'jeetsukumaran/vim-buffergator'
+
+
+" Airline configs for showing tab names
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#fnamemod = ':t'
+" Whitespace configs
+highlight ExtraWhitespace ctermbg=darkred
+let g:strip_whitespace_on_save = 1
 
 " Local VimRC settings
 let g:localvimrc_sandbox = 0
@@ -71,14 +88,14 @@ nmap sw <Plug>(easymotion-overwin-w)
 " Done easy motion configs
 " ------------------------------------
 
+" Shortcut for tagbar
+map <C-t> :TagbarToggle<CR>
+
 " Vim-Go
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
-
-" Shortcut for tagbar
-map <C-t> :TagbarToggle<CR>
 
 " Vim airline colors and fonts
 let g:airline_theme='jellybeans'
@@ -86,18 +103,20 @@ let g:airline_powerline_fonts = 1
 let g:airline_section_b = ''
 let g:airline_section_y = ''
 
+" Completion engine
+Plugin 'Valloric/YouCompleteMe'
 autocmd CompleteDone * pclose
 let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 
+" Plugin 'ternjs/tern_for_vim'
+" let g:tern_map_keys=1
+" let g:tern_show_argument_hints='on_hold'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-" Local VimRC settings
-let g:localvimrc_sandbox = 0
-let g:localvimrc_ask = 0
 
 " CTRLP plugin variables
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -113,14 +132,14 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 " solarized options
-syntax enable 
+syntax enable
 set t_Co=256
 set background=dark
 colorscheme adio
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set number
-set tabstop=4
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
@@ -130,19 +149,21 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set statusline+=%F
 set laststatus=2
-set cursorline
 
 
-au BufRead *.c set colorcolumn=80 "show red line 
-au BufRead *.h set colorcolumn=80 "show red line 
-au BufRead *.cpp set colorcolumn=80 "show red line 
-au BufRead *.py set colorcolumn=80 "show red line 
+au BufRead *.c set colorcolumn=80 "show red line
+au BufRead *.cpp set colorcolumn=80 "show red line
+au BufRead *.py set colorcolumn=80 "show red line
+au BufRead *.tex set colorcolumn=80 "show red line
+au BufRead *.Mos set syntax=oberon
+au BufRead *.Mod set syntax=oberon
+
 
 " au BufRead *.tex set spell spelllang=en_us " enable spell check
 " au BufRead *.txt set spell spelllang=en_us " enable spell check
 
 " To keep the copy buffer between terminal windows
-set clipboard=unnamedplus
+set clipboard=unnamed
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
@@ -207,8 +228,8 @@ if !exists(":DiffOrig")
 endif
 
 
-nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split  
-nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split  
-nnoremap <C-L> <C-W><C-L> "Ctrl-l to move    right a split  
-nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split  
+nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
+nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
+nnoremap <C-L> <C-W><C-L> "Ctrl-l to move    right a split
+nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
 
