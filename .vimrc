@@ -1,141 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-" For combined usage with tmux and some easier navigation
-Plugin 'christoomey/vim-tmux-navigator'
-" The adio colorscheme
-Plugin 'adrianolaru/vim-adio'
-" For searching text across project folder
-Plugin 'mileszs/ack.vim'
-" For showing the project tree
-Plugin 'scrooloose/nerdtree'
-" For some easier text commenting
-Plugin 'tpope/vim-commentary'
-" For syntax checking
-Plugin 'scrooloose/syntastic'
-" For showing the file's status in git
-Plugin 'airblade/vim-gitgutter'
-" For tab completion
-" Plugin 'ervandew/supertab'
-" For tmux files highlighting
-Plugin 'tmux-plugins/vim-tmux'
-" Status Line ehancement
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" Tag bar
-Plugin 'majutsushi/tagbar'
-" Easy motion
-Plugin 'easymotion/vim-easymotion'
-" Golang plugin
-Plugin 'fatih/vim-go'
-" Local VimRC
-Plugin 'embear/vim-localvimrc'
-" Highlight trailing whitespaces
-Plugin 'ntpeters/vim-better-whitespace'
-" CtrlP fuzzy finder
-Plugin 'kien/ctrlp.vim'
-" YCM generator
-Plugin 'rdnetto/YCM-Generator'
-" Color-coded
-" Plugin 'jeaye/color_coded'
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-" Buffer manager
-" nmap <c-b> <Leader>b
-Plugin 'jeetsukumaran/vim-buffergator'
-
-
-" Airline configs for showing tab names
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#fnamemod = ':t'
-" Whitespace configs
-highlight ExtraWhitespace ctermbg=darkred
-let g:strip_whitespace_on_save = 1
-
-" Local VimRC settings
-let g:localvimrc_sandbox = 0
-let g:localvimrc_ask = 0
-
-" Easy motion configs
-" ------------------------------------
-
-" <Leader>f{char} to move to {char}
-map  sf <Plug>(easymotion-bd-f)
-nmap sf <Plug>(easymotion-overwin-f)
-
-" s{char}{char} to move to {char}{char}
-" nmap s <Plug>(easymotion-overwin-f2)
-
-" Move to line
-map sL <Plug>(easymotion-bd-jk)
-nmap sL <Plug>(easymotion-overwin-line)
-
-" Move to word
-map  sw <Plug>(easymotion-bd-w)
-nmap sw <Plug>(easymotion-overwin-w)
-" Done easy motion configs
-" ------------------------------------
-
-" Shortcut for tagbar
-map <C-t> :TagbarToggle<CR>
-
-" Vim-Go
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-
-" Vim airline colors and fonts
-let g:airline_theme='jellybeans'
-let g:airline_powerline_fonts = 1
-let g:airline_section_b = ''
-let g:airline_section_y = ''
-
-" Completion engine
-Plugin 'Valloric/YouCompleteMe'
-autocmd CompleteDone * pclose
-let g:ycm_confirm_extra_conf=0
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-
-
-" Plugin 'ternjs/tern_for_vim'
-" let g:tern_map_keys=1
-" let g:tern_show_argument_hints='on_hold'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" CTRLP plugin variables
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-" NERDTree key mappings
-map <C-n> :NERDTreeToggle<CR>
-
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
-" solarized options
-syntax enable
-set t_Co=256
-set background=dark
+source ~/.vim/plugins.vim
 colorscheme adio
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set number
@@ -149,24 +17,21 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set statusline+=%F
 set laststatus=2
+syntax enable
+
+source ~/.vim/c_cpp.vim
+" source ~/.vim/python.vim
 
 
-au BufRead *.c set colorcolumn=80 "show red line
-au BufRead *.cpp set colorcolumn=80 "show red line
 au BufRead *.py set colorcolumn=80 "show red line
 au BufRead *.tex set colorcolumn=80 "show red line
-au BufRead *.Mos set syntax=oberon
-au BufRead *.Mod set syntax=oberon
-
 
 " au BufRead *.tex set spell spelllang=en_us " enable spell check
 " au BufRead *.txt set spell spelllang=en_us " enable spell check
 
 " To keep the copy buffer between terminal windows
-set clipboard=unnamed
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
+set clipboard=unnamedplus
+"
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -228,8 +93,8 @@ if !exists(":DiffOrig")
 endif
 
 
-nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
-nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
-nnoremap <C-L> <C-W><C-L> "Ctrl-l to move    right a split
-nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
+"nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
+"nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
+"nnoremap <C-L> <C-W><C-L> "Ctrl-l to move    right a split
+"nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
 

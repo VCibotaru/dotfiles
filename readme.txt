@@ -9,7 +9,4 @@ Steps to install the dotfiles:
 8. copy .tmux.conf 
 9. install tmux plugin manager git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 10. run prefix+I in tmux to install plugins
-<<<<<<< HEAD
 11. install powerfonts https://github.com/powerline/fonts
-=======
->>>>>>> da7d37d7413902fec18a9c4a384a6aa300564ee9

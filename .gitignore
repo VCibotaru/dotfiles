@@ -1,4 +1,0 @@
-*.sh
-.tmux/resurrect/*
-*.pyc
-*.swp
