@@ -101,10 +101,19 @@ let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 " Plugin for PEP8 compliance
-Plugin 'nvie/vim-flake8'
-autocmd BufWritePost *.py call Flake8()
+" Plugin 'nvie/vim-flake8'
+" autocmd BufWritePost *.py call Flake8()
+
+" Plugin for having a local wiki managed in Vim
+Plugin 'vimwiki/vimwiki'
+
+" Plugins for code formatting
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+call glaive#Install()
 
