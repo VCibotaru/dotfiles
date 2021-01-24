@@ -189,7 +189,7 @@ if &t_Co > 255
   " Identifier - any variable name
   hi Identifier        ctermfg=208  ctermbg=none cterm=none
     "Function (also: methods for classes)
-    hi Function        ctermfg=118  ctermbg=none cterm=none
+    hi Function        ctermfg=white  ctermbg=none cterm=none
 
   " Statement
   hi Statement         ctermfg=161  ctermbg=none cterm=none
